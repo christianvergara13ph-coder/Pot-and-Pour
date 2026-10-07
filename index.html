@@ -1,0 +1,2146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pot & Pour | Coffee & Plants</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.min.css">
+
+
+<meta
+    name="description"
+    content="Pot & Pour — a cozy coffee and plant shop in Angeles, Pampanga."
+>
+
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="#home" class="brand">
+
+            <div class="logo">
+
+                <div class="logo-leaf"></div>
+
+                <div class="logo-cup"></div>
+
+            </div>
+
+            <div class="brand-text">
+
+                Pot & Pour
+
+                <small>coffee • plants • little joys</small>
+
+            </div>
+
+        </a>
+
+        <button
+            class="hamburger"
+            id="hamburger"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+        <nav id="siteNav">
+
+            <ul>
+
+                <li>
+                    <a href="#home" class="active">Home</a>
+                </li>
+
+                <li>
+                    <a href="#menu">Coffee</a>
+                </li>
+
+                <li>
+                    <a href="#plants">Plants</a>
+                </li>
+
+                <li>
+                    <a href="#about">Our Story</a>
+                </li>
+
+                <li>
+                    <a href="#visit">Visit</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <button
+            class="cart-button"
+            onclick="openCart()"
+        >
+
+            🛒
+
+            <span>Order</span>
+
+            <span
+                class="cart-count"
+                id="cartCount"
+            >
+                0
+            </span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<main id="home">
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+
+        <div class="hero-copy">
+
+            <div class="hero-badge">
+                🌿 A cozy little corner in Angeles
+            </div>
+
+
+            <h1>
+
+                Sip a little.<br>
+
+                <span>Grow a little.</span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                Welcome to <strong>Pot & Pour</strong> —
+                a cute little café where creamy matcha,
+                cozy drinks, and tiny green friends live
+                happily together.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#menu"
+                    class="btn btn-primary"
+                >
+                    ☕ Explore the Menu
+                </a>
+
+
+                <a
+                    href="#plants"
+                    class="btn btn-soft"
+                >
+                    🌱 Shop Plants
+                </a>
+
+            </div>
+
+
+            <div class="slogan">
+
+                “A little pour of happiness,
+                a little pot of green.”
+
+            </div>
+
+        </div>
+
+
+
+        <div class="hero-visual">
+
+            <img
+                class="hero-photo"
+                src="images/matcha.jpg"
+                alt="Matcha drink in a cozy cafe"
+            >
+
+
+            <div class="hero-photo-overlay"></div>
+
+
+            <img
+                class="hero-plant"
+                src="images/plants.jpg"
+                alt="Small succulent plant"
+            >
+
+
+            <div class="floating-note">
+
+                <strong>Plant date?</strong>
+
+                <span>
+                    Bring a friend,
+                    grab a matcha,
+                    pick a plant. 🌿
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INTRO STRIP
+     ========================================================= -->
+
+<section class="intro-strip">
+
+    <div class="container intro-card">
+
+
+        <div class="intro-item">
+
+            <div class="intro-icon">🍵</div>
+
+            <div>
+
+                <strong>Fresh Matcha</strong>
+
+                <span>
+                    Creamy drinks made for slow mornings.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="intro-item">
+
+            <div class="intro-icon">🌱</div>
+
+            <div>
+
+                <strong>Tiny Green Friends</strong>
+
+                <span>
+                    Cute indoor plants from ₱50.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="intro-item">
+
+            <div class="intro-icon">📍</div>
+
+            <div>
+
+                <strong>Angeles, Pampanga</strong>
+
+                <span>
+                    Your cozy neighborhood corner.
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     COFFEE MENU
+     ========================================================= -->
+
+<section
+    class="section menu"
+    id="menu"
+>
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                The Pour
+            </span>
+
+            <h2>
+                Good drinks, made with a little love.
+            </h2>
+
+            <p>
+                Choose from classic coffee favorites, creamy matcha,
+                and special drinks made for a little treat.
+            </p>
+
+        </div>
+
+
+        <!-- MENU CATEGORY BUTTONS -->
+
+        <div class="menu-tabs">
+
+            <button
+                class="menu-tab active"
+                onclick="filterMenu('all', this)"
+            >
+                All Drinks
+            </button>
+
+            <button
+                class="menu-tab"
+                onclick="filterMenu('classics', this)"
+            >
+                Classics
+            </button>
+
+            <button
+                class="menu-tab"
+                onclick="filterMenu('matcha', this)"
+            >
+                Matcha
+            </button>
+
+            <button
+                class="menu-tab"
+                onclick="filterMenu('special', this)"
+            >
+                Special Picks
+            </button>
+
+        </div>
+
+
+        <div class="product-grid" id="coffeeGrid">
+
+
+            <!-- =================================================
+                 CLASSICS
+                 ================================================= -->
+
+            <!-- AMERICANO -->
+
+            <article
+                class="product-card"
+                data-category="classics"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="images/americano.png"
+                        alt="Americano coffee"
+                    >
+
+                    <span class="product-tag">
+                        ☕ Classic
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>Americano</h3>
+
+                    <p class="product-description">
+                        Bold, smooth, and always a good idea.
+                    </p>
+
+
+                    <div class="options">
+
+                        <button
+                            class="option selected"
+                            onclick="selectOption(this)"
+                        >
+                            🧊 Cold
+                        </button>
+
+                        <button
+                            class="option"
+                            onclick="selectOption(this)"
+                        >
+                            🔥 Hot
+                        </button>
+
+                    </div>
+
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            ₱120
+                        </span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart(
+                                'Americano',
+                                120,
+                                'Cold',
+                                'images/americano.png'
+                            )"
+                        >
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CAFFE MACCHIATO -->
+
+            <article
+                class="product-card"
+                data-category="classics"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="images/macchiato.png"
+                        alt="Caffe Macchiato"
+                    >
+
+                    <span class="product-tag">
+                        ☕ Creamy
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>Caffe Macchiato</h3>
+
+                    <p class="product-description">
+                        Espresso with a touch of steamed milk.
+                    </p>
+
+
+                    <div class="options">
+
+                        <button
+                            class="option selected"
+                            onclick="selectOption(this)"
+                        >
+                            🧊 Cold
+                        </button>
+
+                        <button
+                            class="option"
+                            onclick="selectOption(this)"
+                        >
+                            🔥 Hot
+                        </button>
+
+                    </div>
+
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            ₱160
+                        </span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart(
+                                'Caffe Macchiato',
+                                160,
+                                'Cold',
+                                'images/macchiato.png'
+                            )"
+                        >
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARAMEL LATTE -->
+
+            <article
+                class="product-card"
+                data-category="classics"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="images/caramel.png"
+                        alt="Caramel Latte"
+                    >
+
+                    <span class="product-tag">
+                        🍮 Sweet
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>Caramel Latte</h3>
+
+                    <p class="product-description">
+                        Rich espresso, smooth milk, and caramel sweetness.
+                    </p>
+
+
+                    <div class="options">
+
+                        <button
+                            class="option selected"
+                            onclick="selectOption(this)"
+                        >
+                            🧊 Cold
+                        </button>
+
+                        <button
+                            class="option"
+                            onclick="selectOption(this)"
+                        >
+                            🔥 Hot
+                        </button>
+
+                    </div>
+
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            ₱160
+                        </span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart(
+                                'Caramel Latte',
+                                160,
+                                'Cold',
+                                'images/caramel.png'
+                            )"
+                        >
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 MATCHA
+                 ================================================= -->
+
+            <!-- MATCHA LATTE -->
+
+            <article
+                class="product-card"
+                data-category="matcha"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="images/matcha.jpg"
+                        alt="Matcha Latte"
+                    >
+
+                    <span class="product-tag">
+                        🌿 Classic
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>Matcha Latte</h3>
+
+                    <p class="product-description">
+                        Smooth, creamy matcha with a gentle earthy sweetness.
+                    </p>
+
+
+                    <div class="options">
+
+                        <button
+                            class="option selected"
+                            onclick="selectOption(this)"
+                        >
+                            🧊 Cold
+                        </button>
+
+                        <button
+                            class="option"
+                            onclick="selectOption(this)"
+                        >
+                            🔥 Hot
+                        </button>
+
+                    </div>
+
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            ₱180
+                        </span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart(
+                                'Matcha Latte',
+                                180,
+                                'Cold',
+                                'images/matcha.jpg'
+                            )"
+                        >
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- SEASALT MATCHA -->
+
+            <article
+                class="product-card"
+                data-category="matcha"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="images/seasalt-matcha.jpg"
+                        alt="Seasalt Matcha Latte"
+                    >
+
+                    <span class="product-tag">
+                        ⭐ Favorite
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>Seasalt Matcha Latte</h3>
+
+                    <p class="product-description">
+                        Earthy matcha topped with a light creamy sea-salt foam.
+                    </p>
+
+
+                    <div class="options">
+
+                        <button
+                            class="option selected"
+                            onclick="selectOption(this)"
+                        >
+                            🧊 Cold
+                        </button>
+
+                        <button
+                            class="option"
+                            onclick="selectOption(this)"
+                        >
+                            🔥 Hot
+                        </button>
+
+                    </div>
+
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            ₱190
+                        </span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart(
+                                'Seasalt Matcha Latte',
+                                190,
+                                'Cold',
+                                'images/seasalt-matcha.jpg'
+                            )"
+                        >
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- DIRTY MATCHA -->
+
+            <article
+                class="product-card"
+                data-category="matcha"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="images/dirty-matcha.jpg"
+                        alt="Dirty Matcha"
+                    >
+
+                    <span class="product-tag">
+                        ☕ Bold
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>Dirty Matcha</h3>
+
+                    <p class="product-description">
+                        Rich matcha layered with espresso for a creamy caffeine kick.
+                    </p>
+
+
+                    <div class="options">
+
+                        <button
+                            class="option selected"
+                            onclick="selectOption(this)"
+                        >
+                            🧊 Cold
+                        </button>
+
+                        <button
+                            class="option"
+                            onclick="selectOption(this)"
+                        >
+                            🔥 Hot
+                        </button>
+
+                    </div>
+
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            ₱200
+                        </span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart(
+                                'Dirty Matcha',
+                                200,
+                                'Cold',
+                                'images/dirty-matcha.jpg'
+                            )"
+                        >
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 SPECIAL PICKS
+                 ================================================= -->
+
+            <!-- STRAWBERRY MATCHA -->
+
+            <article
+                class="product-card"
+                data-category="special"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="images/strawberry-matcha.jpg"
+                        alt="Strawberry Matcha"
+                    >
+
+                    <span class="product-tag">
+                        🍓 Fruity
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>Strawberry Matcha</h3>
+
+                    <p class="product-description">
+                        Sweet strawberry layered with creamy matcha.
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            ₱210
+                        </span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart(
+                                'Strawberry Matcha',
+                                210,
+                                'Iced',
+                                'images/strawberry-matcha.jpg'
+                            )"
+                        >
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- COOKIE MATCHA -->
+
+            <article
+                class="product-card"
+                data-category="special"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="images/cookie-matcha.jpg"
+                        alt="Cookie Matcha"
+                    >
+
+                    <span class="product-tag">
+                        🍪 Sweet
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>Cookie Matcha</h3>
+
+                    <p class="product-description">
+                        Creamy matcha with a sweet cookie-inspired finish.
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            ₱210
+                        </span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart(
+                                'Cookie Matcha',
+                                210,
+                                'Iced',
+                                'images/cookie-matcha.jpg'
+                            )"
+                        >
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- MATCHOCO FRAPPE -->
+
+            <article
+                class="product-card"
+                data-category="special"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="images/frappe.png"
+                        alt="Matchoco Frappe"
+                    >
+
+                    <span class="product-tag">
+                        🍫 Special
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>Matchoco Frappe</h3>
+
+                    <p class="product-description">
+                        Chocolate and matcha blended together for a rich frappe.
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            ₱210
+                        </span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart(
+                                'Matchoco Frappe',
+                                210,
+                                'Iced',
+                                'images/frappe.png'
+                            )"
+                        >
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PLANTS
+     ========================================================= -->
+
+<!-- PLANTS -->
+<section class="section plants" id="plants">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="eyebrow">The Pot</span>
+            <h2>Take home a little green friend.</h2>
+            <p>
+                Cute indoor plants for your desk, shelf,
+                bedroom, or little café corner.
+            </p>
+        </div>
+
+        <div class="plant-grid">
+
+            <article class="plant-card">
+                <div class="plant-image">
+                    <img src="images/monstera.png"
+                         alt="Monstera plant in a pot">
+                </div>
+                <div class="plant-content">
+                    <h3>Monstera</h3>
+                    <p>A leafy statement plant for your home.</p>
+                    <div class="product-bottom">
+                        <span class="price">₱120</span>
+                        <button class="add-btn"
+                            onclick="addToCart('Monstera', 120, 'Small', 'images/monstera.png')">
+                            + Add
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="plant-card">
+                <div class="plant-image">
+                    <img src="images/snake-plant.png"
+                         alt="Snake plant in a white pot">
+                </div>
+                <div class="plant-content">
+                    <h3>Snake Plant</h3>
+                    <p>A stylish plant for a cozy room.</p>
+                    <div class="product-bottom">
+                        <span class="price">₱80</span>
+                        <button class="add-btn"
+                            onclick="addToCart('Snake Plant', 80, 'Small', 'images/snake-plant.png')">
+                            + Add
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="plant-card">
+                <div class="plant-image">
+                    <img src="images/pothos.png"
+                         alt="Pothos plant with green trailing leaves">
+                </div>
+                <div class="plant-content">
+                    <h3>Pothos</h3>
+                    <p>A lovely leafy plant for shelves.</p>
+                    <div class="product-bottom">
+                        <span class="price">₱60</span>
+                        <button class="add-btn"
+                            onclick="addToCart('Pothos', 60, 'Small', 'images/pothos.png')">
+                            + Add
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="plant-card">
+                <div class="plant-image">
+                    <img src="images/zz-plant.png"
+                         alt="ZZ plant in a white ceramic pot">
+                </div>
+                <div class="plant-content">
+                    <h3>ZZ Plant</h3>
+                    <p>A neat green addition to your space.</p>
+                    <div class="product-bottom">
+                        <span class="price">₱100</span>
+                        <button class="add-btn"
+                            onclick="addToCart('ZZ Plant', 100, 'Small', 'images/zz-plant.png')">
+                            + Add
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="plant-card">
+                <div class="plant-image">
+                    <img src="images/peace-lily.png"
+                         alt="Peace lily with white flowers">
+                </div>
+                <div class="plant-content">
+                    <h3>Peace Lily</h3>
+                    <p>Elegant green leaves with white flowers.</p>
+                    <div class="product-bottom">
+                        <span class="price">₱90</span>
+                        <button class="add-btn"
+                            onclick="addToCart('Peace Lily', 90, 'Small', 'images/peace-lily.png')">
+                            + Add
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="plant-card">
+                <div class="plant-image">
+                    <img src="images/spider-plant.png"
+                         alt="Spider plant with long striped leaves">
+                </div>
+                <div class="plant-content">
+                    <h3>Spider Plant</h3>
+                    <p>A fresh touch for your desk or shelf.</p>
+                    <div class="product-bottom">
+                        <span class="price">₱70</span>
+                        <button class="add-btn"
+                            onclick="addToCart('Spider Plant', 70, 'Small', 'images/spider-plant.png')">
+                            + Add
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="plant-card">
+                <div class="plant-image">
+                    <img src="images/philodendron.png"
+                         alt="Philodendron with heart-shaped leaves">
+                </div>
+                <div class="plant-content">
+                    <h3>Philodendron</h3>
+                    <p>Heart-shaped leaves for a cozy corner.</p>
+                    <div class="product-bottom">
+                        <span class="price">₱75</span>
+                        <button class="add-btn"
+                            onclick="addToCart('Philodendron', 75, 'Small', 'images/philodendron.png')">
+                            + Add
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="plant-card">
+                <div class="plant-image">
+                    <img src="images/calathea.png"
+                         alt="Calathea plant with patterned leaves">
+                </div>
+                <div class="plant-content">
+                    <h3>Calathea</h3>
+                    <p>Beautiful patterned leaves for your home.</p>
+                    <div class="product-bottom">
+                        <span class="price">₱110</span>
+                        <button class="add-btn"
+                            onclick="addToCart('Calathea', 110, 'Small', 'images/calathea.png')">
+                            + Add
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+     ========================================================= -->
+
+<section
+    class="section about"
+    id="about"
+>
+
+    <div class="container about-grid">
+
+
+        <div class="about-photos">
+
+            <img
+                class="about-main-photo"
+                src="images/cafe.jpg"
+                alt="Cozy coffee shop"
+            >
+
+            <img
+                class="about-small-photo"
+                src="images/plants.jpg"
+                alt="Indoor houseplant"
+            >
+
+            <div class="about-note">
+                good drinks + good plants = good day 🌿
+            </div>
+
+        </div>
+
+
+        <div class="about-copy">
+
+            <span class="eyebrow">
+                Our little story
+            </span>
+
+            <h2>
+                Where your drink
+                meets your plant.
+            </h2>
+
+            <p>
+                Pot & Pour was imagined as a cozy little space for
+                people who love two simple things: a good drink and
+                something green to take home.
+            </p>
+
+            <p>
+                Whether you're stopping by for a creamy matcha,
+                looking for a tiny plant for your desk, or simply
+                want a peaceful corner to hang out, Pot & Pour is
+                your little pause in the middle of the day.
+            </p>
+
+
+            <div class="values">
+
+                <div class="value">
+
+                    <div class="value-icon">
+                        🍵
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Slow down
+                        </strong>
+
+                        <span>
+                            Take your time and enjoy the little things.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="value">
+
+                    <div class="value-icon">
+                        🌱
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Grow something
+                        </strong>
+
+                        <span>
+                            Bring home a plant and watch it become
+                            part of your space.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="value">
+
+                    <div class="value-icon">
+                        💗
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Stay cozy
+                        </strong>
+
+                        <span>
+                            Good vibes, cute corners, and a drink
+                            you actually want to photograph.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="#contact"
+                class="btn btn-primary"
+            >
+                Say Hello →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     VISIT
+     ========================================================= -->
+
+<section
+    class="section visit"
+    id="visit"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                Come visit
+            </span>
+
+            <h2>
+                Your next little escape.
+            </h2>
+
+            <p>
+                Find us in Angeles, Pampanga and come hang out
+                with a cup of matcha and a tiny plant friend.
+            </p>
+
+        </div>
+
+
+        <div class="visit-grid">
+
+
+            <div class="location-card">
+
+                <h3>
+                    📍 Pot & Pour
+                </h3>
+
+                <p>
+                    Angeles, Pampanga, Philippines
+                </p>
+
+                <div class="fake-map">
+                    📍
+                </div>
+
+            </div>
+
+
+            <div class="hours-card">
+
+                <h3>
+                    Opening Hours
+                </h3>
+
+
+                <div class="hours-row">
+
+                    <strong>
+                        Monday – Thursday
+                    </strong>
+
+                    <span>
+                        6:00 AM – 6:00 PM
+                    </span>
+
+                </div>
+
+
+                <div class="hours-row">
+
+                    <strong>
+                        Friday
+                    </strong>
+
+                    <span>
+                        6:00 AM – 4:00 PM
+                    </span>
+
+                </div>
+
+
+                <div class="hours-row">
+
+                    <strong>
+                        Saturday
+                    </strong>
+
+                    <span>
+                        8:00 AM – 6:00 PM
+                    </span>
+
+                </div>
+
+
+                <div class="hours-row">
+
+                    <strong>
+                        Sunday
+                    </strong>
+
+                    <span>
+                        Closed
+                    </span>
+
+                </div>
+
+
+                <br>
+
+
+                <p
+                    style="
+                        color: var(--muted);
+                        font-size: .82rem;
+                    "
+                >
+                    ☕ Best time for a quiet matcha:
+                    weekday mornings.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =========================================================
+     STAGE 8 - SHOP INFORMATION TABLE
+     ========================================================= -->
+
+<section class="section" id="information">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="eyebrow">Quick Guide</span>
+            <h2>Pot &amp; Pour at a glance.</h2>
+            <p>Our sample menu and plant information in one easy table.</p>
+        </div>
+
+        <table class="info-table">
+            <caption class="visually-hidden">Pot &amp; Pour sample products</caption>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Item</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Drink</td><td>Matcha Latte</td><td>₱180</td></tr>
+                <tr><td>Drink</td><td>Seasalt Matcha Latte</td><td>₱190</td></tr>
+                <tr><td>Drink</td><td>Dirty Matcha</td><td>₱200</td></tr>
+                <tr><td>Drink</td><td>Strawberry Matcha</td><td>₱210</td></tr>
+                <tr><td>Plant</td><td>Mini Succulent</td><td>₱50</td></tr>
+                <tr><td>Plant</td><td>Indoor Green Plant</td><td>₱120</td></tr>
+            </tbody>
+        </table>
+
+    </div>
+</section>
+
+
+<!-- =========================================================
+     STAGE 7 - FIGURES
+     ========================================================= -->
+
+<section class="section" id="highlights">
+    <div class="container feature-grid">
+
+        <div class="section-heading">
+            <span class="eyebrow">Little Details</span>
+            <h2>Coffee, plants, and cozy moments.</h2>
+            <p>Three visual highlights from the Pot &amp; Pour concept.</p>
+        </div>
+
+        <figure class="feature-figure">
+            <img
+                src="images/matcha.jpg"
+                alt="Green matcha drink on a cafe table"
+                loading="lazy"
+            >
+            <figcaption>Fresh matcha for a calm cafe break.</figcaption>
+        </figure>
+
+        <figure class="feature-figure">
+            <img
+                src="images/plants.jpg"
+                alt="Small indoor plant in a pot"
+                loading="lazy"
+            >
+            <figcaption>Small plants that brighten a room.</figcaption>
+        </figure>
+
+        <figure class="feature-figure">
+            <img
+                src="images/cafe.jpg"
+                alt="Cozy cafe interior"
+                loading="lazy"
+            >
+            <figcaption>A cozy space to slow down and enjoy.</figcaption>
+        </figure>
+
+    </div>
+</section>
+
+
+<!-- =========================================================
+     STAGE 9 - VIDEO
+     ========================================================= -->
+
+<section class="section" id="welcome">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="eyebrow">Welcome</span>
+            <h2>Take a little look around.</h2>
+            <p>Our short welcome video introduces the Pot &amp; Pour concept.</p>
+        </div>
+
+        <video
+            class="welcome-video"
+            controls
+            poster="images/cafe.jpg"
+        >
+            <source src="media/pot-and-pour.mp4" type="video/mp4">
+            <source src="media/pot-and-pour.webm" type="video/webm">
+
+            <track
+                src="media/captions.vtt"
+                kind="captions"
+                srclang="en"
+                label="English captions"
+                default
+            >
+
+            <track
+                src="media/descriptions.vtt"
+                kind="descriptions"
+                srclang="en"
+                label="English descriptions"
+            >
+
+            Your browser does not support the video element.
+            Please update your browser or use a modern browser to view this video.
+        </video>
+
+        <p class="video-caption">
+            Pot &amp; Pour welcome video. Captions are available through the video controls.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
+
+<section
+    class="section contact"
+    id="contact"
+>
+
+    <div class="container contact-grid">
+
+
+        <div class="contact-copy">
+
+            <span class="eyebrow" style="color:#e9b6ae;">
+                Let's be friends
+            </span>
+
+            <h2>
+                Come for the matcha.
+                Stay for the plants.
+            </h2>
+
+            <p>
+                Questions about an order, a plant, or just want to
+                say hi? Send us a message.
+            </p>
+
+
+            <div class="contact-info">
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        ✉
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Email
+                        </strong>
+
+                        <span>
+                            fjoshherrera@gmail.com <br>
+                            larancevincent14@gmail.com
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        ☎
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Phone
+                        </strong>
+
+                        <span>
+                            <a href="tel:+639057103602">09057103602</a><br>
+                            <a href="tel:+639926431376">09926431376</a>
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Location
+                        </strong>
+
+                        <span>
+                            Angeles, Pampanga, Philippines
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <form
+            class="contact-form"
+            onsubmit="sendMessage(event)"
+            id="contactForm"
+        >
+
+            <fieldset>
+                <legend>Contact Pot &amp; Pour</legend>
+
+            <h3 class="form-title">
+                Send us a little note 🌿
+            </h3>
+
+
+            <div class="form-group">
+
+                <label for="name">
+                    Your Name
+                </label>
+
+                <input
+                    id="name"
+                    type="text"
+                    placeholder="e.g. Josh"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="email">
+                    Your Email
+                </label>
+
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="you@example.com"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="message">
+                    Message
+                </label>
+
+                <textarea
+                    id="message"
+                    placeholder="Tell us what's on your mind..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-actions">
+                <button
+                    class="btn btn-primary form-submit"
+                    type="submit"
+                >
+                    Send Message ✉
+                </button>
+
+                <button
+                    class="btn btn-reset"
+                    type="reset"
+                >
+                    Reset
+                </button>
+            </div>
+
+            </fieldset>
+        </form>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="#home"
+                    class="brand"
+                    class="brand footer-brand-link"
+                >
+
+                    <div class="logo">
+
+                        <div class="logo-leaf"></div>
+
+                        <div class="logo-cup"></div>
+
+                    </div>
+
+                    <div class="brand-text">
+
+                        Pot & Pour
+
+                        <small class="footer-brand-subtitle">
+                            coffee • plants • little joys
+                        </small>
+
+                    </div>
+
+                </a>
+
+
+                <p>
+                    A cozy little coffee and plant shop in
+                    Angeles, Pampanga.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-title">
+                    Explore
+                </div>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="#menu">
+                            Coffee Menu
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#plants">
+                            Plant Shop
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about">
+                            Our Story
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#visit">
+                            Visit Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html">
+                            About Pot &amp; Pour
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-title">
+                    Contact
+                </div>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="mailto:fjoshherrera@gmail.com">
+                            fjoshherrera@gmail.com
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="mailto:larancevincent14@gmail.com">
+                            larancevincent14@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:09057103602">
+                            09057103602
+                        </a>
+                    </li>
+
+                     <li>
+                        <a href="tel:09926431376">
+                            09926431376
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Pot & Pour on Facebook">
+                <img src="images/facebook.svg" alt=""> Facebook
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Pot & Pour on Instagram">
+                <img src="images/instagram.svg" alt=""> Instagram
+            </a>
+        </div>
+
+        <div class="copyright">
+
+            © 2026 Pot & Pour.
+            Made with ☕ + 🌱 in Angeles, Pampanga.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     CART
+     ========================================================= -->
+
+<div
+    class="cart-overlay"
+    id="cartOverlay"
+    onclick="closeCartFromOutside(event)"
+>
+
+    <aside
+        class="cart-drawer"
+        id="cartDrawer"
+    >
+
+        <div class="cart-header">
+
+            <h2>
+                Your Order 🛒
+            </h2>
+
+            <button
+                class="close-cart"
+                onclick="closeCart()"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div
+            class="cart-items"
+            id="cartItems"
+        >
+
+            <div class="empty-cart">
+
+                <div class="empty-cart-icon">
+                    🪴
+                </div>
+
+                <p>
+                    Your little basket is empty.
+                </p>
+
+                <small>
+                    Add a matcha or a plant to get started!
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <strong>
+                    Total
+                </strong>
+
+                <span
+                    class="total-price"
+                    id="cartTotal"
+                >
+                    ₱0
+                </span>
+
+            </div>
+
+
+            <button
+                class="btn btn-primary checkout-btn"
+                onclick="openCheckout()"
+                id="checkoutButton"
+            >
+                Continue to Checkout →
+            </button>
+
+
+            <button
+                class="clear-cart"
+                onclick="clearCart()"
+            >
+                Clear order
+            </button>
+
+        </div>
+
+    </aside>
+
+</div>
+
+
+
+<!-- =========================================================
+     CHECKOUT MODAL
+     ========================================================= -->
+
+<div
+    class="modal-overlay"
+    id="checkoutOverlay"
+>
+
+    <div class="modal">
+
+        <div
+            class="modal-header"
+        >
+
+            <h2>
+                Almost there 🌿
+            </h2>
+
+            <button
+                class="close-cart"
+                onclick="closeCheckout()"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div
+            class="modal-summary"
+            id="checkoutSummary"
+        ></div>
+
+
+        <form
+            onsubmit="placeOrder(event)"
+        >
+
+            <div class="form-group">
+
+                <label for="customerName">
+                    Name
+                </label>
+
+                <input
+                    id="customerName"
+                    type="text"
+                    placeholder="Your name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="customerPhone">
+                    Contact Number
+                </label>
+
+                <input
+                    id="customerPhone"
+                    type="tel"
+                    placeholder="09XXXXXXXXX"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="orderType">
+                    Order Type
+                </label>
+
+                <select
+                    id="orderType"
+                    style="
+                        width:100%;
+                        padding:12px;
+                        border:1px solid var(--border);
+                        border-radius:12px;
+                        background:#faf8f3;
+                    "
+                >
+
+                    <option>
+                        Pick-up
+                    </option>
+
+                    <option>
+                        Dine-in
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="orderNotes">
+                    Notes
+                </label>
+
+                <textarea
+                    id="orderNotes"
+                    placeholder="Extra notes for your order..."
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn btn-green checkout-submit"
+            >
+                Place Order ✨
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     TOAST
+     ========================================================= -->
+
+<div
+    class="toast"
+    id="toast"
+>
+    Added to your order ✨
+</div>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
